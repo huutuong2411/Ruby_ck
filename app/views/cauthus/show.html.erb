@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cauthu %>
+
+<div style="display: inline-block;">
+  <%= link_to "Back to cauthu", cauthus_path, class:"btn btn-primary"%>
+  <%= link_to edit_cauthu_path(@cauthu), class:"btn btn-primary" do%> 
+  	<i class="fa fa-user-plus"></i> edit
+	<%end%>
+  <%= link_to "Destroy this cauthu", @cauthu, data: { turbo_method: :delete,turbo_confirm: 'Are you sure?' },class:"btn btn-danger"%>
+		
+</div>

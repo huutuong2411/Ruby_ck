@@ -1,0 +1,32 @@
+<%= form_with(model: cauthu) do |form| %>
+  <% if cauthu.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cauthu.errors.count, "error") %> prohibited this cauthu from being saved:</h2>
+
+      <ul>
+        <% cauthu.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :club, style: "display: block" %>
+    <%= form.text_field :club %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.text_field :age %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

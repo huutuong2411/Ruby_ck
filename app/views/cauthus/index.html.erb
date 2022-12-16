@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cauthus</h1>
+
+<div id="cauthus">
+
+
+<table  class="table table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th class="col-3">Name</th>
+      <th class="col-3">Club</th>
+      <th class="col-3">Age</th>
+      <th class="col-3">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @cauthus.each do |cauthu| %>
+	    <tr>
+	      <th scope="row"><%=cauthu.name%></th>
+	      <td><%= cauthu.club %></td>
+	      <td><%= cauthu.age%></td>
+	      <td>
+		      	<%= link_to "Show", cauthu, class:"btn btn-primary" %>
+			    <%= link_to "Edit", edit_cauthu_path(cauthu), class:"btn btn-warning" %>
+				<%= link_to "Destroy this cauthu", cauthu, data: { turbo_method: :delete,turbo_confirm: 'Are you sure?' },class:"btn btn-danger"%>
+	      </td>
+	    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "New cauthu", new_cauthu_path, class:"btn btn-success" %>      
+</div>
+
+

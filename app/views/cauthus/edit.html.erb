@@ -1,0 +1,11 @@
+<h1>Editing cauthu</h1>
+
+<%= render "form", cauthu: @cauthu %>
+
+<br>
+
+<div>
+  <%= link_to "Show this cauthu", @cauthu %> |
+  <%= link_to "Back to cauthus", cauthus_path %>
+  <%= button_to "Destroy this cauthu", @cauthu, method: :delete %>
+</div>
